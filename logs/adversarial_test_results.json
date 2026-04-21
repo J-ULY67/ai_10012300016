@@ -1,0 +1,37 @@
+{
+  "timestamp_utc": "2026-04-19T04:36:25.358421+00:00",
+  "results": [
+    {
+      "query": "What major changes were announced in December?",
+      "rag_response": "In December 2022, Ghana initiated the Domestic Debt Exchange Programme (DDEP).",
+      "pure_llm_response": "In December 2023, several major changes were announced across various fields. Some of the notable ones include:\n\n1. **Meta's Algorithm Update**: Meta announced changes to its algorithm, prioritizing content from friends and family over public figures and media outlets.\n2. **Twitter's API Changes**: Twitter announced updates to its API, affecting how third-party apps and services interact with the platform.\n3. **Google's Search Updates**: Google rolled out updates to its search algorithm, focusing on improving the accuracy and relevance of search results.\n4. **NASA's Artemis Program**: NASA announced significant updates to its Artemis program, aiming to return humans to the lunar surface by 2025.\n5. **Global Economic Projections**: The International Monetary Fund (IMF) released its updated global economic projections, forecasting a slowdown in global growth due to various economic factors.\n\nThese are just a few examples of the major changes announced in December. If you're looking for information on a specific topic or industry, I'd be happy to try and provide more details.",
+      "rag_response_run_2": "In December 2022, Ghana initiated the Domestic Debt Exchange Programme (DDEP).",
+      "pure_llm_response_run_2": "In December 2023, several major changes were announced across various fields. Some of the notable ones include:\n\n1. **Meta's AI advancements**: Meta announced significant advancements in its AI capabilities, including improved language models and computer vision.\n2. **New US climate strategy**: The US government announced a new climate strategy, focusing on reducing greenhouse gas emissions and promoting clean energy.\n3. **Global economic forecasts**: The International Monetary Fund (IMF) released its global economic forecasts, predicting a slowdown in economic growth due to various factors, including inflation and geopolitical tensions.\n4. **NASA's Artemis program updates**: NASA announced updates to its Artemis program, which aims to return humans to the Moon by 2025 and establish a sustainable presence on the lunar surface.\n5. **EU's new data protection regulations**: The European Union announced new data protection regulations, aimed at strengthening online privacy and security for its citizens.\n\nThese are just a few examples of the major changes announced in December. If you're looking for information on a specific topic or industry, I'd be happy to try and provide more details.",
+      "hallucination_detected_rag": false,
+      "hallucination_detected_llm": true,
+      "consistency_note": "RAG: ran twice, SequenceMatcher ratio=1.00 (very similar); Pure LLM: ran twice, SequenceMatcher ratio=0.41 (different)",
+      "hallucination_run_detail": {
+        "rag_run1": false,
+        "rag_run2": false,
+        "llm_run1": true,
+        "llm_run2": true
+      }
+    },
+    {
+      "query": "Who won the 2020 Ghana presidential election with over 70% of votes?",
+      "rag_response": "I don't have enough information to answer that.",
+      "pure_llm_response": "Nana Akufo-Addo won the 2020 Ghana presidential election, but he did not receive over 70% of the votes. According to the Electoral Commission of Ghana, Nana Akufo-Addo won the election with 51.59% of the votes, while his main opponent, John Mahama, received 47.36% of the votes.",
+      "rag_response_run_2": "I don't have enough information to answer that.",
+      "pure_llm_response_run_2": "Nana Akufo-Addo won the 2020 Ghana presidential election, but he did not receive over 70% of the votes. According to the Electoral Commission of Ghana, Nana Akufo-Addo won the election with 51.59% of the votes, while his main opponent, John Mahama, received 47.36% of the votes.",
+      "hallucination_detected_rag": false,
+      "hallucination_detected_llm": false,
+      "consistency_note": "RAG: ran twice, SequenceMatcher ratio=1.00 (very similar); Pure LLM: ran twice, SequenceMatcher ratio=1.00 (very similar)",
+      "hallucination_run_detail": {
+        "rag_run1": false,
+        "rag_run2": false,
+        "llm_run1": false,
+        "llm_run2": false
+      }
+    }
+  ]
+}

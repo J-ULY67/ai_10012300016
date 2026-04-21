@@ -1,0 +1,659 @@
+[
+  {
+    "experiment": "retriever_failure_case",
+    "ts_utc": "2026-04-19T03:20:00.354814+00:00",
+    "query": "What happened?",
+    "without_distance_filter": [
+      {
+        "rank": 1,
+        "text": "Sample chunk 3",
+        "metadata": {
+          "source": "demo",
+          "chunk_index": 3
+        },
+        "similarity_score": 1.8943800926208496
+      },
+      {
+        "rank": 2,
+        "text": "Sample chunk 0",
+        "metadata": {
+          "source": "demo",
+          "chunk_index": 0
+        },
+        "similarity_score": 1.9317439794540405
+      },
+      {
+        "rank": 3,
+        "text": "Sample chunk 4",
+        "metadata": {
+          "source": "demo",
+          "chunk_index": 4
+        },
+        "similarity_score": 1.9881428480148315
+      },
+      {
+        "rank": 4,
+        "text": "Sample chunk 1",
+        "metadata": {
+          "source": "demo",
+          "chunk_index": 1
+        },
+        "similarity_score": 2.0902607440948486
+      },
+      {
+        "rank": 5,
+        "text": "Sample chunk 2",
+        "metadata": {
+          "source": "demo",
+          "chunk_index": 2
+        },
+        "similarity_score": 2.1378533840179443
+      }
+    ],
+    "with_distance_filter": [],
+    "max_l2_squared_threshold": 1.5
+  },
+  {
+    "experiment": "retriever_failure_case",
+    "ts_utc": "2026-04-19T03:22:08.843423+00:00",
+    "query": "What happened?",
+    "without_distance_filter": [
+      {
+        "rank": 1,
+        "text": "THEME: Resetting The Economy For The Ghana We Want",
+        "metadata": {
+          "source": "budget",
+          "page_number": 1
+        },
+        "similarity_score": 1.633975625038147
+      },
+      {
+        "rank": 2,
+        "text": "In Ashanti Region, J. A Mills of NDC received 438234 votes.",
+        "metadata": {
+          "source": "election",
+          "row_index": 416
+        },
+        "similarity_score": 1.6360551118850708
+      },
+      {
+        "rank": 3,
+        "text": "In Ashanti Region, Akua Donkor of GFP received 593 votes.",
+        "metadata": {
+          "source": "election",
+          "row_index": 20
+        },
+        "similarity_score": 1.6402251720428467
+      },
+      {
+        "rank": 4,
+        "text": "In Ashanti Region, J. A. Mills of NDC received 398362 votes.",
+        "metadata": {
+          "source": "election",
+          "row_index": 466
+        },
+        "similarity_score": 1.6414333581924438
+      },
+      {
+        "rank": 5,
+        "text": "In Ashanti Region, J. A. Kuffour of NPP received 1235395 votes.",
+        "metadata": {
+          "source": "election",
+          "row_index": 465
+        },
+        "similarity_score": 1.6418224573135376
+      }
+    ],
+    "with_distance_filter": [],
+    "max_l2_squared_threshold": 1.5
+  },
+  {
+    "experiment": "retriever_failure_case",
+    "ts_utc": "2026-04-19T03:23:45.253419+00:00",
+    "query": "What happened?",
+    "without_distance_filter": [
+      {
+        "rank": 1,
+        "text": "THEME: Resetting The Economy For The Ghana We Want",
+        "metadata": {
+          "source": "budget",
+          "page_number": 1
+        },
+        "similarity_score": 1.633975625038147
+      },
+      {
+        "rank": 2,
+        "text": "In Ashanti Region, J. A Mills of NDC received 438234 votes.",
+        "metadata": {
+          "source": "election",
+          "row_index": 416
+        },
+        "similarity_score": 1.6360551118850708
+      },
+      {
+        "rank": 3,
+        "text": "In Ashanti Region, Akua Donkor of GFP received 593 votes.",
+        "metadata": {
+          "source": "election",
+          "row_index": 20
+        },
+        "similarity_score": 1.6402251720428467
+      },
+      {
+        "rank": 4,
+        "text": "In Ashanti Region, J. A. Mills of NDC received 398362 votes.",
+        "metadata": {
+          "source": "election",
+          "row_index": 466
+        },
+        "similarity_score": 1.6414333581924438
+      },
+      {
+        "rank": 5,
+        "text": "In Ashanti Region, J. A. Kuffour of NPP received 1235395 votes.",
+        "metadata": {
+          "source": "election",
+          "row_index": 465
+        },
+        "similarity_score": 1.6418224573135376
+      }
+    ],
+    "with_distance_filter": [],
+    "max_l2_squared_threshold": 1.5
+  },
+  {
+    "experiment": "prompt_template_comparison",
+    "ts_utc": "2026-04-19T03:28:28.198813+00:00",
+    "query": "Who won the presidential election?",
+    "template_1_strict": "You are an AI assistant for Academic City University.\nAnswer the question using ONLY the context provided below.\nIf the answer is not in the context, say exactly:\n\"I don't have enough information to answer that.\"\nDo not make up any information.\n\nContext:\n[Chunk 1]\nIn Northern Region, Edward Mahama of PNC received 48302 votes.\n\n[Chunk 2]\nIn Northern Region, Edward Mahama of PNC received 45870 votes.\n\n[Chunk 3]\nIn Central Region, Edward Mahama of PNC received 2693 votes.\n\n[Chunk 4]\nIn Western Region, Edward Mahama of PNC received 3580 votes.\n\n[Chunk 5]\nIn Eastern Region, Edward Mahama of PNC received 2948 votes.\n\n[Chunk 6]\nIn Ahafo Region, Ivor Kobina Greenstreet of CPP received 191 votes.\n\n[Chunk 7]\nIn Northern Region, Others of Others received 66849 votes.\n\n[Chunk 8]\nIn Brong Ahafo Region, Edward Mahama of PNC received 10447 votes.\n\nQuestion: Who won the presidential election?\n\nAnswer:\n",
+    "template_2_flexible": "You are an AI assistant for Academic City University.\nUse the context below as your primary source.\nIf you reason beyond the context, clearly start that\nsentence with \"Based on general knowledge:\".\n\nContext:\n[Chunk 1]\nIn Northern Region, Edward Mahama of PNC received 48302 votes.\n\n[Chunk 2]\nIn Northern Region, Edward Mahama of PNC received 45870 votes.\n\n[Chunk 3]\nIn Central Region, Edward Mahama of PNC received 2693 votes.\n\n[Chunk 4]\nIn Western Region, Edward Mahama of PNC received 3580 votes.\n\n[Chunk 5]\nIn Eastern Region, Edward Mahama of PNC received 2948 votes.\n\n[Chunk 6]\nIn Ahafo Region, Ivor Kobina Greenstreet of CPP received 191 votes.\n\n[Chunk 7]\nIn Northern Region, Others of Others received 66849 votes.\n\n[Chunk 8]\nIn Brong Ahafo Region, Edward Mahama of PNC received 10447 votes.\n\nQuestion: Who won the presidential election?\n\nAnswer:\n"
+  },
+  {
+    "experiment": "prompt_template_comparison",
+    "ts_utc": "2026-04-19T03:28:33.965593+00:00",
+    "query": "What is the education budget allocation?",
+    "template_1_strict": "You are an AI assistant for Academic City University.\nAnswer the question using ONLY the context provided below.\nIf the answer is not in the context, say exactly:\n\"I don't have enough information to answer that.\"\nDo not make up any information.\n\nContext:\n[Chunk 1]\n380. Mr. Speaker, we have also allocated an amount of GH¢564.6 million for comprehensive\nprovision of curricula-based textbooks covering the following:\ni. four (4) sets of KG books and workbooks for about 2.8 million learners;\nii. four (4) sets of primary textbooks for 800,000 learners; and\niii. nine (9) sets of JHS 3 textbooks for 540,000 learners.\n381. Mr. Speaker, under the School Feeding Programme, budgetary provision has been\nincreased from GH¢1.344 billion to GH¢1.788 billion in 2025, representing an 33%\nincrease. The allocation for 2025 reflects an increase in the feeding cost per meal per\nchild per day from GH¢1.50 to GH¢2.00, representing 33.3%.\n382. Mr. Speaker, the Capitation Grant has been allocated GH¢ 145.5 million, up from\nGH¢84 million in 2024, an increase of 73.2% over the previous year’s allocation.\n383. Mr. Speaker, we have also allocated GH¢203 million for the payment of the Teacher\nTrainee allowances and another GH¢480 million for Nursing Trainee allowances.\n384. Mr. Speaker, we have uncapped the National Health Insurance Levy (NHIL). An\namount of GH¢9.93 billion has been programmed for the National Health Insurance\nScheme (NHIS) for;\ni. claim payments;\nii. essential medicines;\niii. vaccines payments;\niv. bridging of the USAID financing shortfall;\nv. the Free Primary Healthcare; and\nvi. the Ghana Medical Care Trust (MahamaCares); among others.\n385. In 2025, Government will continue to implement reforms and increase budgetary\nallocations to enhance the implementation of the four targeted social protection\nprogrammes, namely NHIS, the LEAP Programme, the School Feeding Programme,\nand the Capitation Grant.\n386. Mr. Speaker, under the LEAP programme, benefits will be indexed to inflation and the\nnumber of beneficiary households will be increased from 350,000 to 400,000 from July\n2025. The allocation for LEAP benefits has also been increased by 30.8% from\nGH¢728.8 million to GH¢953.5 million in 2025.\n387. Mr. Speaker, we have also uncapped the Road Fund. An amount of GH¢2.81 billion\nhas been programmed for the Ghana Road Fund to be used solely for road\nmaintenance. This represents an increase of 155.5% over the 2024 allocation of\nGH¢1.1 billion.\n388. Mr. Speaker, we have allocated an amount of GH¢7.51 billion to the District Assembly\nCommon Fund (DACF). In accordance with our decentralization policy objective, we\npropose to Parliament that a minimum of 80% of the funds should be sent directly to\n72\n\nQuestion: What is the education budget allocation?\n\nAnswer:\n",
+    "template_2_flexible": "You are an AI assistant for Academic City University.\nUse the context below as your primary source.\nIf you reason beyond the context, clearly start that\nsentence with \"Based on general knowledge:\".\n\nContext:\n[Chunk 1]\n380. Mr. Speaker, we have also allocated an amount of GH¢564.6 million for comprehensive\nprovision of curricula-based textbooks covering the following:\ni. four (4) sets of KG books and workbooks for about 2.8 million learners;\nii. four (4) sets of primary textbooks for 800,000 learners; and\niii. nine (9) sets of JHS 3 textbooks for 540,000 learners.\n381. Mr. Speaker, under the School Feeding Programme, budgetary provision has been\nincreased from GH¢1.344 billion to GH¢1.788 billion in 2025, representing an 33%\nincrease. The allocation for 2025 reflects an increase in the feeding cost per meal per\nchild per day from GH¢1.50 to GH¢2.00, representing 33.3%.\n382. Mr. Speaker, the Capitation Grant has been allocated GH¢ 145.5 million, up from\nGH¢84 million in 2024, an increase of 73.2% over the previous year’s allocation.\n383. Mr. Speaker, we have also allocated GH¢203 million for the payment of the Teacher\nTrainee allowances and another GH¢480 million for Nursing Trainee allowances.\n384. Mr. Speaker, we have uncapped the National Health Insurance Levy (NHIL). An\namount of GH¢9.93 billion has been programmed for the National Health Insurance\nScheme (NHIS) for;\ni. claim payments;\nii. essential medicines;\niii. vaccines payments;\niv. bridging of the USAID financing shortfall;\nv. the Free Primary Healthcare; and\nvi. the Ghana Medical Care Trust (MahamaCares); among others.\n385. In 2025, Government will continue to implement reforms and increase budgetary\nallocations to enhance the implementation of the four targeted social protection\nprogrammes, namely NHIS, the LEAP Programme, the School Feeding Programme,\nand the Capitation Grant.\n386. Mr. Speaker, under the LEAP programme, benefits will be indexed to inflation and the\nnumber of beneficiary households will be increased from 350,000 to 400,000 from July\n2025. The allocation for LEAP benefits has also been increased by 30.8% from\nGH¢728.8 million to GH¢953.5 million in 2025.\n387. Mr. Speaker, we have also uncapped the Road Fund. An amount of GH¢2.81 billion\nhas been programmed for the Ghana Road Fund to be used solely for road\nmaintenance. This represents an increase of 155.5% over the 2024 allocation of\nGH¢1.1 billion.\n388. Mr. Speaker, we have allocated an amount of GH¢7.51 billion to the District Assembly\nCommon Fund (DACF). In accordance with our decentralization policy objective, we\npropose to Parliament that a minimum of 80% of the funds should be sent directly to\n72\n\nQuestion: What is the education budget allocation?\n\nAnswer:\n"
+  },
+  {
+    "experiment": "prompt_template_comparison",
+    "ts_utc": "2026-04-19T03:32:02.849743+00:00",
+    "query": "Who won the presidential election?",
+    "template_1_strict": "You are an AI assistant for Academic City University.\nAnswer the question using ONLY the context provided below.\nIf the answer is not in the context, say exactly:\n\"I don't have enough information to answer that.\"\nDo not make up any information.\n\nContext:\n[Chunk 1]\nIn Northern Region, Edward Mahama of PNC received 48302 votes.\n\n[Chunk 2]\nIn Northern Region, Edward Mahama of PNC received 45870 votes.\n\n[Chunk 3]\nIn Central Region, Edward Mahama of PNC received 2693 votes.\n\n[Chunk 4]\nIn Western Region, Edward Mahama of PNC received 3580 votes.\n\n[Chunk 5]\nIn Eastern Region, Edward Mahama of PNC received 2948 votes.\n\n[Chunk 6]\nIn Ahafo Region, Ivor Kobina Greenstreet of CPP received 191 votes.\n\n[Chunk 7]\nIn Northern Region, Others of Others received 66849 votes.\n\n[Chunk 8]\nIn Brong Ahafo Region, Edward Mahama of PNC received 10447 votes.\n\nQuestion: Who won the presidential election?\n\nAnswer:\n",
+    "template_2_flexible": "You are an AI assistant for Academic City University.\nUse the context below as your primary source.\nIf you reason beyond the context, clearly start that\nsentence with \"Based on general knowledge:\".\n\nContext:\n[Chunk 1]\nIn Northern Region, Edward Mahama of PNC received 48302 votes.\n\n[Chunk 2]\nIn Northern Region, Edward Mahama of PNC received 45870 votes.\n\n[Chunk 3]\nIn Central Region, Edward Mahama of PNC received 2693 votes.\n\n[Chunk 4]\nIn Western Region, Edward Mahama of PNC received 3580 votes.\n\n[Chunk 5]\nIn Eastern Region, Edward Mahama of PNC received 2948 votes.\n\n[Chunk 6]\nIn Ahafo Region, Ivor Kobina Greenstreet of CPP received 191 votes.\n\n[Chunk 7]\nIn Northern Region, Others of Others received 66849 votes.\n\n[Chunk 8]\nIn Brong Ahafo Region, Edward Mahama of PNC received 10447 votes.\n\nQuestion: Who won the presidential election?\n\nAnswer:\n"
+  },
+  {
+    "experiment": "prompt_template_comparison",
+    "ts_utc": "2026-04-19T03:32:02.884684+00:00",
+    "query": "What is the education budget allocation?",
+    "template_1_strict": "You are an AI assistant for Academic City University.\nAnswer the question using ONLY the context provided below.\nIf the answer is not in the context, say exactly:\n\"I don't have enough information to answer that.\"\nDo not make up any information.\n\nContext:\n[Chunk 1]\n380. Mr. Speaker, we have also allocated an amount of GH¢564.6 million for comprehensive\nprovision of curricula-based textbooks covering the following:\ni. four (4) sets of KG books and workbooks for about 2.8 million learners;\nii. four (4) sets of primary textbooks for 800,000 learners; and\niii. nine (9) sets of JHS 3 textbooks for 540,000 learners.\n381. Mr. Speaker, under the School Feeding Programme, budgetary provision has been\nincreased from GH¢1.344 billion to GH¢1.788 billion in 2025, representing an 33%\nincrease. The allocation for 2025 reflects an increase in the feeding cost per meal per\nchild per day from GH¢1.50 to GH¢2.00, representing 33.3%.\n382. Mr. Speaker, the Capitation Grant has been allocated GH¢ 145.5 million, up from\nGH¢84 million in 2024, an increase of 73.2% over the previous year’s allocation.\n383. Mr. Speaker, we have also allocated GH¢203 million for the payment of the Teacher\nTrainee allowances and another GH¢480 million for Nursing Trainee allowances.\n384. Mr. Speaker, we have uncapped the National Health Insurance Levy (NHIL). An\namount of GH¢9.93 billion has been programmed for the National Health Insurance\nScheme (NHIS) for;\ni. claim payments;\nii. essential medicines;\niii. vaccines payments;\niv. bridging of the USAID financing shortfall;\nv. the Free Primary Healthcare; and\nvi. the Ghana Medical Care Trust (MahamaCares); among others.\n385. In 2025, Government will continue to implement reforms and increase budgetary\nallocations to enhance the implementation of the four targeted social protection\nprogrammes, namely NHIS, the LEAP Programme, the School Feeding Programme,\nand the Capitation Grant.\n386. Mr. Speaker, under the LEAP programme, benefits will be indexed to inflation and the\nnumber of beneficiary households will be increased from 350,000 to 400,000 from July\n2025. The allocation for LEAP benefits has also been increased by 30.8% from\nGH¢728.8 million to GH¢953.5 million in 2025.\n387. Mr. Speaker, we have also uncapped the Road Fund. An amount of GH¢2.81 billion\nhas been programmed for the Ghana Road Fund to be used solely for road\nmaintenance. This represents an increase of 155.5% over the 2024 allocation of\nGH¢1.1 billion.\n388. Mr. Speaker, we have allocated an amount of GH¢7.51 billion to the District Assembly\nCommon Fund (DACF). In accordance with our decentralization policy objective, we\npropose to Parliament that a minimum of 80% of the funds should be sent directly to\n72\n\nQuestion: What is the education budget allocation?\n\nAnswer:\n",
+    "template_2_flexible": "You are an AI assistant for Academic City University.\nUse the context below as your primary source.\nIf you reason beyond the context, clearly start that\nsentence with \"Based on general knowledge:\".\n\nContext:\n[Chunk 1]\n380. Mr. Speaker, we have also allocated an amount of GH¢564.6 million for comprehensive\nprovision of curricula-based textbooks covering the following:\ni. four (4) sets of KG books and workbooks for about 2.8 million learners;\nii. four (4) sets of primary textbooks for 800,000 learners; and\niii. nine (9) sets of JHS 3 textbooks for 540,000 learners.\n381. Mr. Speaker, under the School Feeding Programme, budgetary provision has been\nincreased from GH¢1.344 billion to GH¢1.788 billion in 2025, representing an 33%\nincrease. The allocation for 2025 reflects an increase in the feeding cost per meal per\nchild per day from GH¢1.50 to GH¢2.00, representing 33.3%.\n382. Mr. Speaker, the Capitation Grant has been allocated GH¢ 145.5 million, up from\nGH¢84 million in 2024, an increase of 73.2% over the previous year’s allocation.\n383. Mr. Speaker, we have also allocated GH¢203 million for the payment of the Teacher\nTrainee allowances and another GH¢480 million for Nursing Trainee allowances.\n384. Mr. Speaker, we have uncapped the National Health Insurance Levy (NHIL). An\namount of GH¢9.93 billion has been programmed for the National Health Insurance\nScheme (NHIS) for;\ni. claim payments;\nii. essential medicines;\niii. vaccines payments;\niv. bridging of the USAID financing shortfall;\nv. the Free Primary Healthcare; and\nvi. the Ghana Medical Care Trust (MahamaCares); among others.\n385. In 2025, Government will continue to implement reforms and increase budgetary\nallocations to enhance the implementation of the four targeted social protection\nprogrammes, namely NHIS, the LEAP Programme, the School Feeding Programme,\nand the Capitation Grant.\n386. Mr. Speaker, under the LEAP programme, benefits will be indexed to inflation and the\nnumber of beneficiary households will be increased from 350,000 to 400,000 from July\n2025. The allocation for LEAP benefits has also been increased by 30.8% from\nGH¢728.8 million to GH¢953.5 million in 2025.\n387. Mr. Speaker, we have also uncapped the Road Fund. An amount of GH¢2.81 billion\nhas been programmed for the Ghana Road Fund to be used solely for road\nmaintenance. This represents an increase of 155.5% over the 2024 allocation of\nGH¢1.1 billion.\n388. Mr. Speaker, we have allocated an amount of GH¢7.51 billion to the District Assembly\nCommon Fund (DACF). In accordance with our decentralization policy objective, we\npropose to Parliament that a minimum of 80% of the funds should be sent directly to\n72\n\nQuestion: What is the education budget allocation?\n\nAnswer:\n"
+  },
+  {
+    "experiment": "prompt_template_comparison",
+    "ts_utc": "2026-04-19T03:35:04.506467+00:00",
+    "query": "Who won the presidential election?",
+    "template_1_strict": "You are an AI assistant for Academic City University.\nAnswer the question using ONLY the context provided below.\nIf the answer is not in the context, say exactly:\n\"I don't have enough information to answer that.\"\nDo not make up any information.\n\nContext:\n[Chunk 1]\nIn Northern Region, Edward Mahama of PNC received 48302 votes.\n\n[Chunk 2]\nIn Northern Region, Edward Mahama of PNC received 45870 votes.\n\n[Chunk 3]\nIn Central Region, Edward Mahama of PNC received 2693 votes.\n\n[Chunk 4]\nIn Western Region, Edward Mahama of PNC received 3580 votes.\n\n[Chunk 5]\nIn Eastern Region, Edward Mahama of PNC received 2948 votes.\n\n[Chunk 6]\nIn Ahafo Region, Ivor Kobina Greenstreet of CPP received 191 votes.\n\n[Chunk 7]\nIn Northern Region, Others of Others received 66849 votes.\n\n[Chunk 8]\nIn Brong Ahafo Region, Edward Mahama of PNC received 10447 votes.\n\nQuestion: Who won the presidential election?\n\nAnswer:\n",
+    "template_2_flexible": "You are an AI assistant for Academic City University.\nUse the context below as your primary source.\nIf you reason beyond the context, clearly start that\nsentence with \"Based on general knowledge:\".\n\nContext:\n[Chunk 1]\nIn Northern Region, Edward Mahama of PNC received 48302 votes.\n\n[Chunk 2]\nIn Northern Region, Edward Mahama of PNC received 45870 votes.\n\n[Chunk 3]\nIn Central Region, Edward Mahama of PNC received 2693 votes.\n\n[Chunk 4]\nIn Western Region, Edward Mahama of PNC received 3580 votes.\n\n[Chunk 5]\nIn Eastern Region, Edward Mahama of PNC received 2948 votes.\n\n[Chunk 6]\nIn Ahafo Region, Ivor Kobina Greenstreet of CPP received 191 votes.\n\n[Chunk 7]\nIn Northern Region, Others of Others received 66849 votes.\n\n[Chunk 8]\nIn Brong Ahafo Region, Edward Mahama of PNC received 10447 votes.\n\nQuestion: Who won the presidential election?\n\nAnswer:\n"
+  },
+  {
+    "experiment": "prompt_template_comparison",
+    "ts_utc": "2026-04-19T03:35:04.535247+00:00",
+    "query": "What is the education budget allocation?",
+    "template_1_strict": "You are an AI assistant for Academic City University.\nAnswer the question using ONLY the context provided below.\nIf the answer is not in the context, say exactly:\n\"I don't have enough information to answer that.\"\nDo not make up any information.\n\nContext:\n[Chunk 1]\n380. Mr. Speaker, we have also allocated an amount of GH¢564.6 million for comprehensive\nprovision of curricula-based textbooks covering the following:\ni. four (4) sets of KG books and workbooks for about 2.8 million learners;\nii. four (4) sets of primary textbooks for 800,000 learners; and\niii. nine (9) sets of JHS 3 textbooks for 540,000 learners.\n381. Mr. Speaker, under the School Feeding Programme, budgetary provision has been\nincreased from GH¢1.344 billion to GH¢1.788 billion in 2025, representing an 33%\nincrease. The allocation for 2025 reflects an increase in the feeding cost per meal per\nchild per day from GH¢1.50 to GH¢2.00, representing 33.3%.\n382. Mr. Speaker, the Capitation Grant has been allocated GH¢ 145.5 million, up from\nGH¢84 million in 2024, an increase of 73.2% over the previous year’s allocation.\n383. Mr. Speaker, we have also allocated GH¢203 million for the payment of the Teacher\nTrainee allowances and another GH¢480 million for Nursing Trainee allowances.\n384. Mr. Speaker, we have uncapped the National Health Insurance Levy (NHIL). An\namount of GH¢9.93 billion has been programmed for the National Health Insurance\nScheme (NHIS) for;\ni. claim payments;\nii. essential medicines;\niii. vaccines payments;\niv. bridging of the USAID financing shortfall;\nv. the Free Primary Healthcare; and\nvi. the Ghana Medical Care Trust (MahamaCares); among others.\n385. In 2025, Government will continue to implement reforms and increase budgetary\nallocations to enhance the implementation of the four targeted social protection\nprogrammes, namely NHIS, the LEAP Programme, the School Feeding Programme,\nand the Capitation Grant.\n386. Mr. Speaker, under the LEAP programme, benefits will be indexed to inflation and the\nnumber of beneficiary households will be increased from 350,000 to 400,000 from July\n2025. The allocation for LEAP benefits has also been increased by 30.8% from\nGH¢728.8 million to GH¢953.5 million in 2025.\n387. Mr. Speaker, we have also uncapped the Road Fund. An amount of GH¢2.81 billion\nhas been programmed for the Ghana Road Fund to be used solely for road\nmaintenance. This represents an increase of 155.5% over the 2024 allocation of\nGH¢1.1 billion.\n388. Mr. Speaker, we have allocated an amount of GH¢7.51 billion to the District Assembly\nCommon Fund (DACF). In accordance with our decentralization policy objective, we\npropose to Parliament that a minimum of 80% of the funds should be sent directly to\n72\n\nQuestion: What is the education budget allocation?\n\nAnswer:\n",
+    "template_2_flexible": "You are an AI assistant for Academic City University.\nUse the context below as your primary source.\nIf you reason beyond the context, clearly start that\nsentence with \"Based on general knowledge:\".\n\nContext:\n[Chunk 1]\n380. Mr. Speaker, we have also allocated an amount of GH¢564.6 million for comprehensive\nprovision of curricula-based textbooks covering the following:\ni. four (4) sets of KG books and workbooks for about 2.8 million learners;\nii. four (4) sets of primary textbooks for 800,000 learners; and\niii. nine (9) sets of JHS 3 textbooks for 540,000 learners.\n381. Mr. Speaker, under the School Feeding Programme, budgetary provision has been\nincreased from GH¢1.344 billion to GH¢1.788 billion in 2025, representing an 33%\nincrease. The allocation for 2025 reflects an increase in the feeding cost per meal per\nchild per day from GH¢1.50 to GH¢2.00, representing 33.3%.\n382. Mr. Speaker, the Capitation Grant has been allocated GH¢ 145.5 million, up from\nGH¢84 million in 2024, an increase of 73.2% over the previous year’s allocation.\n383. Mr. Speaker, we have also allocated GH¢203 million for the payment of the Teacher\nTrainee allowances and another GH¢480 million for Nursing Trainee allowances.\n384. Mr. Speaker, we have uncapped the National Health Insurance Levy (NHIL). An\namount of GH¢9.93 billion has been programmed for the National Health Insurance\nScheme (NHIS) for;\ni. claim payments;\nii. essential medicines;\niii. vaccines payments;\niv. bridging of the USAID financing shortfall;\nv. the Free Primary Healthcare; and\nvi. the Ghana Medical Care Trust (MahamaCares); among others.\n385. In 2025, Government will continue to implement reforms and increase budgetary\nallocations to enhance the implementation of the four targeted social protection\nprogrammes, namely NHIS, the LEAP Programme, the School Feeding Programme,\nand the Capitation Grant.\n386. Mr. Speaker, under the LEAP programme, benefits will be indexed to inflation and the\nnumber of beneficiary households will be increased from 350,000 to 400,000 from July\n2025. The allocation for LEAP benefits has also been increased by 30.8% from\nGH¢728.8 million to GH¢953.5 million in 2025.\n387. Mr. Speaker, we have also uncapped the Road Fund. An amount of GH¢2.81 billion\nhas been programmed for the Ghana Road Fund to be used solely for road\nmaintenance. This represents an increase of 155.5% over the 2024 allocation of\nGH¢1.1 billion.\n388. Mr. Speaker, we have allocated an amount of GH¢7.51 billion to the District Assembly\nCommon Fund (DACF). In accordance with our decentralization policy objective, we\npropose to Parliament that a minimum of 80% of the funds should be sent directly to\n72\n\nQuestion: What is the education budget allocation?\n\nAnswer:\n"
+  },
+  {
+    "timestamp": "2026-04-19T03:42:41.428291+00:00",
+    "query": "Who won the most votes in Accra Central constituency?",
+    "expanded_query": "Who won the most votes in Accra Central constituency?",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "text": "In Greater Accra Region, Others of Others received 48619 votes.",
+        "score": 0.661424458026886,
+        "source": "election"
+      },
+      {
+        "rank": 2,
+        "text": "In Greater Accra Region, Edward Mahama of PNC received 32723 votes.",
+        "score": 0.6847090125083923,
+        "source": "election"
+      },
+      {
+        "rank": 3,
+        "text": "In Greater Accra Region, Edward Mahama of PNC received 6174 votes.",
+        "score": 0.6861156225204468,
+        "source": "election"
+      },
+      {
+        "rank": 4,
+        "text": "In Greater Accra Region, Edward Mahama of PNC received 16065 votes.",
+        "score": 0.6959744095802307,
+        "source": "election"
+      },
+      {
+        "rank": 5,
+        "text": "In Greater Accra Region, George Aggudey of CPP received 12600 votes.",
+        "score": 0.720906674861908,
+        "source": "election"
+      }
+    ],
+    "prompt_template_used": 1,
+    "prompt_sent_to_llm": "You are an AI assistant for Academic City University.\nAnswer the question using ONLY the context provided below.\nIf the answer is not in the context, say exactly:\n\"I don't have enough information to answer that.\"\nDo not make up any information.\n\nContext:\n[Chunk 1]\nIn Greater Accra Region, Others of Others received 48619 votes.\n\n[Chunk 2]\nIn Greater Accra Region, Edward Mahama of PNC received 32723 votes.\n\n[Chunk 3]\nIn Greater Accra Region, Edward Mahama of PNC received 6174 votes.\n\n[Chunk 4]\nIn Greater Accra Region, Edward Mahama of PNC received 16065 votes.\n\n[Chunk 5]\nIn Greater Accra Region, George Aggudey of CPP received 12600 votes.\n\nQuestion: Who won the most votes in Accra Central constituency?\n\nAnswer:\n",
+    "llm_response": "I don't have enough information to answer that."
+  },
+  {
+    "timestamp": "2026-04-19T03:43:20.959617+00:00",
+    "query": "Who won the most votes in Accra Central constituency?",
+    "expanded_query": "Who won the most votes in Accra Central constituency?",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "text": "In Greater Accra Region, Others of Others received 48619 votes.",
+        "score": 0.661424458026886,
+        "source": "election"
+      },
+      {
+        "rank": 2,
+        "text": "In Greater Accra Region, Edward Mahama of PNC received 32723 votes.",
+        "score": 0.6847090125083923,
+        "source": "election"
+      },
+      {
+        "rank": 3,
+        "text": "In Greater Accra Region, Edward Mahama of PNC received 6174 votes.",
+        "score": 0.6861156225204468,
+        "source": "election"
+      },
+      {
+        "rank": 4,
+        "text": "In Greater Accra Region, Edward Mahama of PNC received 16065 votes.",
+        "score": 0.6959744095802307,
+        "source": "election"
+      },
+      {
+        "rank": 5,
+        "text": "In Greater Accra Region, George Aggudey of CPP received 12600 votes.",
+        "score": 0.720906674861908,
+        "source": "election"
+      }
+    ],
+    "prompt_template_used": 1,
+    "prompt_sent_to_llm": "You are an AI assistant for Academic City University.\nAnswer the question using ONLY the context provided below.\nIf the answer is not in the context, say exactly:\n\"I don't have enough information to answer that.\"\nDo not make up any information.\n\nContext:\n[Chunk 1]\nIn Greater Accra Region, Others of Others received 48619 votes.\n\n[Chunk 2]\nIn Greater Accra Region, Edward Mahama of PNC received 32723 votes.\n\n[Chunk 3]\nIn Greater Accra Region, Edward Mahama of PNC received 6174 votes.\n\n[Chunk 4]\nIn Greater Accra Region, Edward Mahama of PNC received 16065 votes.\n\n[Chunk 5]\nIn Greater Accra Region, George Aggudey of CPP received 12600 votes.\n\nQuestion: Who won the most votes in Accra Central constituency?\n\nAnswer:\n",
+    "llm_response": "I don't have enough information to answer that."
+  },
+  {
+    "timestamp": "2026-04-19T03:43:21.190685+00:00",
+    "query": "What is Ghana's projected GDP growth in the 2025 budget?",
+    "expanded_query": "What is Ghana's projected GDP growth in the 2025 budget? expenditure revenue fiscal economic growth output",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "text": "THE 2025 BUDGET STATEMENT\nAND ECONOMIC POLICY OF GOVERNMENT\nThe Budget Statement and Economic Policy of the Government of Ghana for the 2025\nFinancial Year is available for public access.\nTo purchase a physical copy, please contact the Ministry’s Public Relations Office at:\nMinistry of Finance\nPublic Relations Office\nNew Building, Ground Floor, Rooms 001 and 003\nP. O. Box MB 40\nAccra – Ghana\nElectronic copies can be downloaded from our website (www.mofep.gov.gh)",
+        "score": 0.5264863967895508,
+        "source": "budget"
+      },
+      {
+        "rank": 2,
+        "text": "60. The table below summarizes Ghana’s performance on the rationalized ECOWAS\nmacroeconomic convergence criteria as of December 2024:\nTable 4: Ghana’s performance on the rationalized ECOWAS macroeconomic\nconvergence criteria as of December 2024\nNo. Convergence Criteria Target Ghana\nPrimary Criteria\n1 Budget Deficit (Inc. Grants)/GDP ≤ 3% 5.2% (Not Achieved)\n2 Inflation (annual average) ≤ 5% 22.9% (Not Achieved)\nCentral Bank Budget Deficit\n3 10% zero financing (Achieved)\nFinancing\n4 Gross External Reserves ≥ 3 months 4.0 Months (Achieved)\nSecondary Criteria\n5 Nominal Exchange Rate ± 10% -19.20% (Not achieved)\n6 Public Debt /GDP ≤ 70% 61.8% (Achieved)\nSource: BoG/MoF\n61. Despite these challenges, Ghana is projected to improve its performance by the end\nof 2025, benefiting from ongoing macroeconomic reforms aimed at fiscal consolidation,\nenhanced revenue mobilization, and monetary stability.",
+        "score": 0.5418089628219604,
+        "source": "budget"
+      },
+      {
+        "rank": 3,
+        "text": "The Budget Statement\nand Economic Policy\nof the Government of Ghana for the\n2025 Financial Year\nPresented to Parliament by\nDR. CASSIEL ATO FORSON (MP)\nMINISTER FOR FINANCE\nOn Tuesday March 11, 2025\nOn the Authority of\nHIS EXCELLENCY JOHN DRAMANI MAHAMA\nPRESIDENT OF THE REPUBLIC OF GHANA\nIn accordance with Section 28 of the\nPublic Financial Management Act, 2016 (Act 921)",
+        "score": 0.6148152351379395,
+        "source": "budget"
+      },
+      {
+        "rank": 4,
+        "text": "SECTION 6: SECTORAL PERFORMANCE AND OUTLOOK\nIntroduction\n396. Mr. Speaker, the Theme ‘‘Resetting the Economy for the Ghana We Want” the\nimplementation of prudent and sustainable programmes and interventions that drives\ninclusive growth and robust job creation across the country.\n397. The Medium-Term National Development Policy Framework (MTNDPF 2022-2025) is\nbeing implemented through the plans of sector Ministries, Departments and Agencies,\nas well as District Assemblies. This section, therefore, highlights the performance of\nthe sectors in 2024 with regard to the implementation of the MTNDPF 2022-2025 and\nprovide the outlook for the MDAs in line with the Executive Instrument (E.I. 1, 2025)\nand the State of the Nation (SONA) as presented by H.E. The President on the 27th of\nFebruary, 2025.\n398. The 2025 Budget introduces transformative sectoral programmes and projects\ndesigned to stimulate economic growth and development. These strategic initiatives\nincludes:\ni. implementing the “Adwumawura” programme\nii. the “Teacher Dabrɛ Initiative”\niii. the “Poultry Farm to Table” and “Nkoko Nkitinkiti” Projects;\niv. MahamaCares;\nv. E-okada; and\nvi. One Million Coders Project.\nAdministration Sectors\n399. The main focus of the Administration Sector is to ensure effective democratic\ngovernance, public financial management, local governance administration, public\naccountability, public policy management, as well as good international relations,\ndevelopment communications, and civil society engagement.\n400. The programmes in this sector aim to achieve the SDGs 1,3,4,6,8,10,12,16, and 17,\nand Africa Union (AU) Agenda 2063 Goals 2,11,12,13,15,19 and 20.\nOffice of Government Machinery\n2024 Performance and Outlook for 2025\n401. Mr. Speaker, the Office of Government Machinery (OGM) exists to provide accountable,\ntransparent, managerial, technical, and administrative services to the Presidency and\nother stakeholders for the attainment of the government’s development agenda of\nimproving the quality of life of all Ghanaians.\n402. Mr. Speaker, the Cabinet Secretariat organised 16 meetings and 2 Cabinet retreats,\nreceived 43 Cabinet memos, produced 52 reports on Cabinet decisions out of which\n14 were submitted to Parliament.\n74",
+        "score": 0.6427969932556152,
+        "source": "budget"
+      },
+      {
+        "rank": 5,
+        "text": "SECTION 3: STATE OF GHANA’S ECONOMY AS AT END\n2024\n62. Mr. Speaker, to put the assessment of the Ghanaian economy in proper perspective,\nit will be useful to first restate the macro-fiscal targets for 2024:\ni. Overall real GDP growth rate of 3.1 percent;\nii. Overall Non-Oil real GDP growth rate of 2.8 percent;\niii. End-period December year-on-year inflation of 15.0 percent;\niv. Overall budget deficit (Commitment basis) of 4.2 percent of GDP;\nv. Primary balance surplus (Commitment basis) of 0.5 percent of GDP; and\nvi. Gross International Reserves (including oil funds and encumbered assets) to cover\nnot less than 3.0 months of imports.\n63. Mr. Speaker, we have inherited a precarious economic condition beset by daunting\nfiscal challenges characterized by large accumulation of MDA arrears/payables, energy\nsector financing shortfalls, and fiscal risks from the cocoa and financial sectors. Weak\ncommitment control system and reckless public spending have reversed the progress\nmade in fiscal consolidation under the IMF-supported Programme which commenced\nin 2023.\nStatus of IMF-Supported Programme\n64. Mr. Speaker, despite the gains made under the IMF-supported Programme since its\nimplementation in May 2023, the economy is still fragile and remains in distress.\n65. Mr. Speaker, key performance targets, under the Quantitative Performance Criteria\n(QPCs), Indicative Targets (ITs) and Monetary Policy Consultative Clause (MPCC), to\nbe assessed in the upcoming 4th review of the Programme by the IMF staff scheduled\nfor April 2025 such as the primary balance (commitment), inflation, and social\nprotection spending for end-December 2024, are likely missed. In addition, all\nstructural benchmarks due by end-December 2024 and January 2025 are likely missed.\n66. Mr. Speaker, 2024 did not witness any improvement in inflation as inflation ended the\nyear at 23.8%, which is 0.6 percentage points higher than the 23.2% recorded at the\nend of 2023. The 2024 end-period inflation also exceeded the budget target of 15%\nby 8.8 percentage points and the IMF central target of 18% by 5.8 percentage points,\ntriggering a discussion with the IMF under the Monetary Policy Consultation Clause\n(MPCC).\n67. Mr. Speaker, the primary balance (commitment) worsened from a deficit of 0.2% of\nGDP in 2023 to a deficit of 3.9% in 2024, which is 4.4 percentage points worse than\nthe target surplus of 0.5% for the year 2024.\n10",
+        "score": 0.6689453125,
+        "source": "budget"
+      }
+    ],
+    "prompt_template_used": 1,
+    "prompt_sent_to_llm": "You are an AI assistant for Academic City University.\nAnswer the question using ONLY the context provided below.\nIf the answer is not in the context, say exactly:\n\"I don't have enough information to answer that.\"\nDo not make up any information.\n\nContext:\n[Chunk 1]\nTHE 2025 BUDGET STATEMENT\nAND ECONOMIC POLICY OF GOVERNMENT\nThe Budget Statement and Economic Policy of the Government of Ghana for the 2025\nFinancial Year is available for public access.\nTo purchase a physical copy, please contact the Ministry’s Public Relations Office at:\nMinistry of Finance\nPublic Relations Office\nNew Building, Ground Floor, Rooms 001 and 003\nP. O. Box MB 40\nAccra – Ghana\nElectronic copies can be downloaded from our website (www.mofep.gov.gh)\n\n[Chunk 2]\n60. The table below summarizes Ghana’s performance on the rationalized ECOWAS\nmacroeconomic convergence criteria as of December 2024:\nTable 4: Ghana’s performance on the rationalized ECOWAS macroeconomic\nconvergence criteria as of December 2024\nNo. Convergence Criteria Target Ghana\nPrimary Criteria\n1 Budget Deficit (Inc. Grants)/GDP ≤ 3% 5.2% (Not Achieved)\n2 Inflation (annual average) ≤ 5% 22.9% (Not Achieved)\nCentral Bank Budget Deficit\n3 10% zero financing (Achieved)\nFinancing\n4 Gross External Reserves ≥ 3 months 4.0 Months (Achieved)\nSecondary Criteria\n5 Nominal Exchange Rate ± 10% -19.20% (Not achieved)\n6 Public Debt /GDP ≤ 70% 61.8% (Achieved)\nSource: BoG/MoF\n61. Despite these challenges, Ghana is projected to improve its performance by the end\nof 2025, benefiting from ongoing macroeconomic reforms aimed at fiscal consolidation,\nenhanced revenue mobilization, and monetary stability.\n\n[Chunk 3]\nThe Budget Statement\nand Economic Policy\nof the Government of Ghana for the\n2025 Financial Year\nPresented to Parliament by\nDR. CASSIEL ATO FORSON (MP)\nMINISTER FOR FINANCE\nOn Tuesday March 11, 2025\nOn the Authority of\nHIS EXCELLENCY JOHN DRAMANI MAHAMA\nPRESIDENT OF THE REPUBLIC OF GHANA\nIn accordance with Section 28 of the\nPublic Financial Management Act, 2016 (Act 921)\n\nQuestion: What is Ghana's projected GDP growth in the 2025 budget?\n\nAnswer:\n",
+    "llm_response": "I don't have enough information to answer that."
+  },
+  {
+    "timestamp": "2026-04-19T03:43:21.399230+00:00",
+    "query": "What is the meaning of life?",
+    "expanded_query": "What is the meaning of life?",
+    "retrieved_chunks": [],
+    "prompt_template_used": 1,
+    "prompt_sent_to_llm": "You are an AI assistant for Academic City University.\nAnswer the question using ONLY the context provided below.\nIf the answer is not in the context, say exactly:\n\"I don't have enough information to answer that.\"\nDo not make up any information.\n\nContext:\n\n\nQuestion: What is the meaning of life?\n\nAnswer:\n",
+    "llm_response": "I don't have enough information to answer that."
+  },
+  {
+    "timestamp": "2026-04-19T03:46:49.061230+00:00",
+    "query": "Who won the most votes in Accra Central constituency?",
+    "expanded_query": "Who won the most votes in Accra Central constituency?",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "text": "In Greater Accra Region, Others of Others received 48619 votes.",
+        "score": 0.661424458026886,
+        "source": "election"
+      },
+      {
+        "rank": 2,
+        "text": "In Greater Accra Region, Edward Mahama of PNC received 32723 votes.",
+        "score": 0.6847090125083923,
+        "source": "election"
+      },
+      {
+        "rank": 3,
+        "text": "In Greater Accra Region, Edward Mahama of PNC received 6174 votes.",
+        "score": 0.6861156225204468,
+        "source": "election"
+      },
+      {
+        "rank": 4,
+        "text": "In Greater Accra Region, Edward Mahama of PNC received 16065 votes.",
+        "score": 0.6959744095802307,
+        "source": "election"
+      },
+      {
+        "rank": 5,
+        "text": "In Greater Accra Region, George Aggudey of CPP received 12600 votes.",
+        "score": 0.720906674861908,
+        "source": "election"
+      }
+    ],
+    "prompt_template_used": 1,
+    "prompt_sent_to_llm": "You are an AI assistant for Academic City University.\nAnswer the question using ONLY the context provided below.\nIf the answer is not in the context, say exactly:\n\"I don't have enough information to answer that.\"\nDo not make up any information.\n\nContext:\n[Chunk 1]\nIn Greater Accra Region, Others of Others received 48619 votes.\n\n[Chunk 2]\nIn Greater Accra Region, Edward Mahama of PNC received 32723 votes.\n\n[Chunk 3]\nIn Greater Accra Region, Edward Mahama of PNC received 6174 votes.\n\n[Chunk 4]\nIn Greater Accra Region, Edward Mahama of PNC received 16065 votes.\n\n[Chunk 5]\nIn Greater Accra Region, George Aggudey of CPP received 12600 votes.\n\nQuestion: Who won the most votes in Accra Central constituency?\n\nAnswer:\n",
+    "llm_response": "I don't have enough information to answer that."
+  },
+  {
+    "timestamp": "2026-04-19T03:46:49.320622+00:00",
+    "query": "What is Ghana's projected GDP growth in the 2025 budget?",
+    "expanded_query": "What is Ghana's projected GDP growth in the 2025 budget? expenditure revenue fiscal economic growth output",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "text": "THE 2025 BUDGET STATEMENT\nAND ECONOMIC POLICY OF GOVERNMENT\nThe Budget Statement and Economic Policy of the Government of Ghana for the 2025\nFinancial Year is available for public access.\nTo purchase a physical copy, please contact the Ministry’s Public Relations Office at:\nMinistry of Finance\nPublic Relations Office\nNew Building, Ground Floor, Rooms 001 and 003\nP. O. Box MB 40\nAccra – Ghana\nElectronic copies can be downloaded from our website (www.mofep.gov.gh)",
+        "score": 0.5264863967895508,
+        "source": "budget"
+      },
+      {
+        "rank": 2,
+        "text": "60. The table below summarizes Ghana’s performance on the rationalized ECOWAS\nmacroeconomic convergence criteria as of December 2024:\nTable 4: Ghana’s performance on the rationalized ECOWAS macroeconomic\nconvergence criteria as of December 2024\nNo. Convergence Criteria Target Ghana\nPrimary Criteria\n1 Budget Deficit (Inc. Grants)/GDP ≤ 3% 5.2% (Not Achieved)\n2 Inflation (annual average) ≤ 5% 22.9% (Not Achieved)\nCentral Bank Budget Deficit\n3 10% zero financing (Achieved)\nFinancing\n4 Gross External Reserves ≥ 3 months 4.0 Months (Achieved)\nSecondary Criteria\n5 Nominal Exchange Rate ± 10% -19.20% (Not achieved)\n6 Public Debt /GDP ≤ 70% 61.8% (Achieved)\nSource: BoG/MoF\n61. Despite these challenges, Ghana is projected to improve its performance by the end\nof 2025, benefiting from ongoing macroeconomic reforms aimed at fiscal consolidation,\nenhanced revenue mobilization, and monetary stability.",
+        "score": 0.5418089628219604,
+        "source": "budget"
+      },
+      {
+        "rank": 3,
+        "text": "The Budget Statement\nand Economic Policy\nof the Government of Ghana for the\n2025 Financial Year\nPresented to Parliament by\nDR. CASSIEL ATO FORSON (MP)\nMINISTER FOR FINANCE\nOn Tuesday March 11, 2025\nOn the Authority of\nHIS EXCELLENCY JOHN DRAMANI MAHAMA\nPRESIDENT OF THE REPUBLIC OF GHANA\nIn accordance with Section 28 of the\nPublic Financial Management Act, 2016 (Act 921)",
+        "score": 0.6148152351379395,
+        "source": "budget"
+      },
+      {
+        "rank": 4,
+        "text": "SECTION 6: SECTORAL PERFORMANCE AND OUTLOOK\nIntroduction\n396. Mr. Speaker, the Theme ‘‘Resetting the Economy for the Ghana We Want” the\nimplementation of prudent and sustainable programmes and interventions that drives\ninclusive growth and robust job creation across the country.\n397. The Medium-Term National Development Policy Framework (MTNDPF 2022-2025) is\nbeing implemented through the plans of sector Ministries, Departments and Agencies,\nas well as District Assemblies. This section, therefore, highlights the performance of\nthe sectors in 2024 with regard to the implementation of the MTNDPF 2022-2025 and\nprovide the outlook for the MDAs in line with the Executive Instrument (E.I. 1, 2025)\nand the State of the Nation (SONA) as presented by H.E. The President on the 27th of\nFebruary, 2025.\n398. The 2025 Budget introduces transformative sectoral programmes and projects\ndesigned to stimulate economic growth and development. These strategic initiatives\nincludes:\ni. implementing the “Adwumawura” programme\nii. the “Teacher Dabrɛ Initiative”\niii. the “Poultry Farm to Table” and “Nkoko Nkitinkiti” Projects;\niv. MahamaCares;\nv. E-okada; and\nvi. One Million Coders Project.\nAdministration Sectors\n399. The main focus of the Administration Sector is to ensure effective democratic\ngovernance, public financial management, local governance administration, public\naccountability, public policy management, as well as good international relations,\ndevelopment communications, and civil society engagement.\n400. The programmes in this sector aim to achieve the SDGs 1,3,4,6,8,10,12,16, and 17,\nand Africa Union (AU) Agenda 2063 Goals 2,11,12,13,15,19 and 20.\nOffice of Government Machinery\n2024 Performance and Outlook for 2025\n401. Mr. Speaker, the Office of Government Machinery (OGM) exists to provide accountable,\ntransparent, managerial, technical, and administrative services to the Presidency and\nother stakeholders for the attainment of the government’s development agenda of\nimproving the quality of life of all Ghanaians.\n402. Mr. Speaker, the Cabinet Secretariat organised 16 meetings and 2 Cabinet retreats,\nreceived 43 Cabinet memos, produced 52 reports on Cabinet decisions out of which\n14 were submitted to Parliament.\n74",
+        "score": 0.6427969932556152,
+        "source": "budget"
+      },
+      {
+        "rank": 5,
+        "text": "SECTION 3: STATE OF GHANA’S ECONOMY AS AT END\n2024\n62. Mr. Speaker, to put the assessment of the Ghanaian economy in proper perspective,\nit will be useful to first restate the macro-fiscal targets for 2024:\ni. Overall real GDP growth rate of 3.1 percent;\nii. Overall Non-Oil real GDP growth rate of 2.8 percent;\niii. End-period December year-on-year inflation of 15.0 percent;\niv. Overall budget deficit (Commitment basis) of 4.2 percent of GDP;\nv. Primary balance surplus (Commitment basis) of 0.5 percent of GDP; and\nvi. Gross International Reserves (including oil funds and encumbered assets) to cover\nnot less than 3.0 months of imports.\n63. Mr. Speaker, we have inherited a precarious economic condition beset by daunting\nfiscal challenges characterized by large accumulation of MDA arrears/payables, energy\nsector financing shortfalls, and fiscal risks from the cocoa and financial sectors. Weak\ncommitment control system and reckless public spending have reversed the progress\nmade in fiscal consolidation under the IMF-supported Programme which commenced\nin 2023.\nStatus of IMF-Supported Programme\n64. Mr. Speaker, despite the gains made under the IMF-supported Programme since its\nimplementation in May 2023, the economy is still fragile and remains in distress.\n65. Mr. Speaker, key performance targets, under the Quantitative Performance Criteria\n(QPCs), Indicative Targets (ITs) and Monetary Policy Consultative Clause (MPCC), to\nbe assessed in the upcoming 4th review of the Programme by the IMF staff scheduled\nfor April 2025 such as the primary balance (commitment), inflation, and social\nprotection spending for end-December 2024, are likely missed. In addition, all\nstructural benchmarks due by end-December 2024 and January 2025 are likely missed.\n66. Mr. Speaker, 2024 did not witness any improvement in inflation as inflation ended the\nyear at 23.8%, which is 0.6 percentage points higher than the 23.2% recorded at the\nend of 2023. The 2024 end-period inflation also exceeded the budget target of 15%\nby 8.8 percentage points and the IMF central target of 18% by 5.8 percentage points,\ntriggering a discussion with the IMF under the Monetary Policy Consultation Clause\n(MPCC).\n67. Mr. Speaker, the primary balance (commitment) worsened from a deficit of 0.2% of\nGDP in 2023 to a deficit of 3.9% in 2024, which is 4.4 percentage points worse than\nthe target surplus of 0.5% for the year 2024.\n10",
+        "score": 0.6689453125,
+        "source": "budget"
+      }
+    ],
+    "prompt_template_used": 1,
+    "prompt_sent_to_llm": "You are an AI assistant for Academic City University.\nAnswer the question using ONLY the context provided below.\nIf the answer is not in the context, say exactly:\n\"I don't have enough information to answer that.\"\nDo not make up any information.\n\nContext:\n[Chunk 1]\nTHE 2025 BUDGET STATEMENT\nAND ECONOMIC POLICY OF GOVERNMENT\nThe Budget Statement and Economic Policy of the Government of Ghana for the 2025\nFinancial Year is available for public access.\nTo purchase a physical copy, please contact the Ministry’s Public Relations Office at:\nMinistry of Finance\nPublic Relations Office\nNew Building, Ground Floor, Rooms 001 and 003\nP. O. Box MB 40\nAccra – Ghana\nElectronic copies can be downloaded from our website (www.mofep.gov.gh)\n\n[Chunk 2]\n60. The table below summarizes Ghana’s performance on the rationalized ECOWAS\nmacroeconomic convergence criteria as of December 2024:\nTable 4: Ghana’s performance on the rationalized ECOWAS macroeconomic\nconvergence criteria as of December 2024\nNo. Convergence Criteria Target Ghana\nPrimary Criteria\n1 Budget Deficit (Inc. Grants)/GDP ≤ 3% 5.2% (Not Achieved)\n2 Inflation (annual average) ≤ 5% 22.9% (Not Achieved)\nCentral Bank Budget Deficit\n3 10% zero financing (Achieved)\nFinancing\n4 Gross External Reserves ≥ 3 months 4.0 Months (Achieved)\nSecondary Criteria\n5 Nominal Exchange Rate ± 10% -19.20% (Not achieved)\n6 Public Debt /GDP ≤ 70% 61.8% (Achieved)\nSource: BoG/MoF\n61. Despite these challenges, Ghana is projected to improve its performance by the end\nof 2025, benefiting from ongoing macroeconomic reforms aimed at fiscal consolidation,\nenhanced revenue mobilization, and monetary stability.\n\n[Chunk 3]\nThe Budget Statement\nand Economic Policy\nof the Government of Ghana for the\n2025 Financial Year\nPresented to Parliament by\nDR. CASSIEL ATO FORSON (MP)\nMINISTER FOR FINANCE\nOn Tuesday March 11, 2025\nOn the Authority of\nHIS EXCELLENCY JOHN DRAMANI MAHAMA\nPRESIDENT OF THE REPUBLIC OF GHANA\nIn accordance with Section 28 of the\nPublic Financial Management Act, 2016 (Act 921)\n\nQuestion: What is Ghana's projected GDP growth in the 2025 budget?\n\nAnswer:\n",
+    "llm_response": "I don't have enough information to answer that."
+  },
+  {
+    "timestamp": "2026-04-19T03:46:49.544134+00:00",
+    "query": "What is the meaning of life?",
+    "expanded_query": "What is the meaning of life?",
+    "retrieved_chunks": [],
+    "prompt_template_used": 1,
+    "prompt_sent_to_llm": "You are an AI assistant for Academic City University.\nAnswer the question using ONLY the context provided below.\nIf the answer is not in the context, say exactly:\n\"I don't have enough information to answer that.\"\nDo not make up any information.\n\nContext:\n\n\nQuestion: What is the meaning of life?\n\nAnswer:\n",
+    "llm_response": "I don't have enough information to answer that."
+  },
+  {
+    "experiment": "retriever_failure_case",
+    "ts_utc": "2026-04-19T04:29:00.220269+00:00",
+    "query": "What happened?",
+    "without_distance_filter": [
+      {
+        "rank": 1,
+        "text": "THEME: Resetting The Economy For The Ghana We Want",
+        "metadata": {
+          "source": "budget",
+          "page_number": 1
+        },
+        "similarity_score": 1.633975625038147,
+        "feedback_delta": 0.0,
+        "effective_score": 1.633975625038147
+      },
+      {
+        "rank": 2,
+        "text": "In Ashanti Region, J. A Mills of NDC received 438234 votes.",
+        "metadata": {
+          "source": "election",
+          "row_index": 416
+        },
+        "similarity_score": 1.6360551118850708,
+        "feedback_delta": 0.0,
+        "effective_score": 1.6360551118850708
+      },
+      {
+        "rank": 3,
+        "text": "In Ashanti Region, Akua Donkor of GFP received 593 votes.",
+        "metadata": {
+          "source": "election",
+          "row_index": 20
+        },
+        "similarity_score": 1.6402251720428467,
+        "feedback_delta": 0.0,
+        "effective_score": 1.6402251720428467
+      },
+      {
+        "rank": 4,
+        "text": "In Ashanti Region, J. A. Mills of NDC received 398362 votes.",
+        "metadata": {
+          "source": "election",
+          "row_index": 466
+        },
+        "similarity_score": 1.6414333581924438,
+        "feedback_delta": 0.0,
+        "effective_score": 1.6414333581924438
+      },
+      {
+        "rank": 5,
+        "text": "In Ashanti Region, J. A. Kuffour of NPP received 1235395 votes.",
+        "metadata": {
+          "source": "election",
+          "row_index": 465
+        },
+        "similarity_score": 1.6418224573135376,
+        "feedback_delta": 0.0,
+        "effective_score": 1.6418224573135376
+      }
+    ],
+    "with_distance_filter": [],
+    "max_l2_squared_threshold": 1.5
+  },
+  {
+    "experiment": "retriever_failure_case",
+    "ts_utc": "2026-04-19T04:34:46.712949+00:00",
+    "query": "What happened?",
+    "without_distance_filter": [
+      {
+        "rank": 1,
+        "text": "THEME: Resetting The Economy For The Ghana We Want",
+        "metadata": {
+          "source": "budget",
+          "page_number": 1
+        },
+        "similarity_score": 1.633975625038147,
+        "feedback_delta": 0.0,
+        "effective_score": 1.633975625038147
+      },
+      {
+        "rank": 2,
+        "text": "In Ashanti Region, J. A Mills of NDC received 438234 votes.",
+        "metadata": {
+          "source": "election",
+          "row_index": 416
+        },
+        "similarity_score": 1.6360551118850708,
+        "feedback_delta": 0.0,
+        "effective_score": 1.6360551118850708
+      },
+      {
+        "rank": 3,
+        "text": "In Ashanti Region, Akua Donkor of GFP received 593 votes.",
+        "metadata": {
+          "source": "election",
+          "row_index": 20
+        },
+        "similarity_score": 1.6402251720428467,
+        "feedback_delta": 0.0,
+        "effective_score": 1.6402251720428467
+      },
+      {
+        "rank": 4,
+        "text": "In Ashanti Region, J. A. Mills of NDC received 398362 votes.",
+        "metadata": {
+          "source": "election",
+          "row_index": 466
+        },
+        "similarity_score": 1.6414333581924438,
+        "feedback_delta": 0.0,
+        "effective_score": 1.6414333581924438
+      },
+      {
+        "rank": 5,
+        "text": "In Ashanti Region, J. A. Kuffour of NPP received 1235395 votes.",
+        "metadata": {
+          "source": "election",
+          "row_index": 465
+        },
+        "similarity_score": 1.6418224573135376,
+        "feedback_delta": 0.0,
+        "effective_score": 1.6418224573135376
+      }
+    ],
+    "with_distance_filter": [],
+    "max_l2_squared_threshold": 1.5
+  },
+  {
+    "timestamp": "2026-04-19T04:35:55.008588+00:00",
+    "query": "Who won the most votes in Accra Central constituency?",
+    "expanded_query": "Who won the most votes in Accra Central constituency?",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "text": "In Greater Accra Region, Others of Others received 48619 votes.",
+        "score": 0.661424458026886,
+        "source": "election"
+      },
+      {
+        "rank": 2,
+        "text": "In Greater Accra Region, Edward Mahama of PNC received 32723 votes.",
+        "score": 0.6847090125083923,
+        "source": "election"
+      },
+      {
+        "rank": 3,
+        "text": "In Greater Accra Region, Edward Mahama of PNC received 6174 votes.",
+        "score": 0.6861156225204468,
+        "source": "election"
+      },
+      {
+        "rank": 4,
+        "text": "In Greater Accra Region, Edward Mahama of PNC received 16065 votes.",
+        "score": 0.6959744095802307,
+        "source": "election"
+      },
+      {
+        "rank": 5,
+        "text": "In Greater Accra Region, George Aggudey of CPP received 12600 votes.",
+        "score": 0.720906674861908,
+        "source": "election"
+      }
+    ],
+    "prompt_template_used": 1,
+    "prompt_sent_to_llm": "You are an AI assistant for Academic City University.\nAnswer the question using ONLY the context provided below.\nIf the answer is not in the context, say exactly:\n\"I don't have enough information to answer that.\"\nDo not make up any information.\n\nContext:\n[Chunk 1]\nIn Greater Accra Region, Others of Others received 48619 votes.\n\n[Chunk 2]\nIn Greater Accra Region, Edward Mahama of PNC received 32723 votes.\n\n[Chunk 3]\nIn Greater Accra Region, Edward Mahama of PNC received 6174 votes.\n\n[Chunk 4]\nIn Greater Accra Region, Edward Mahama of PNC received 16065 votes.\n\n[Chunk 5]\nIn Greater Accra Region, George Aggudey of CPP received 12600 votes.\n\nQuestion: Who won the most votes in Accra Central constituency?\n\nAnswer:\n",
+    "llm_response": "I don't have enough information to answer that."
+  },
+  {
+    "timestamp": "2026-04-19T04:35:55.247745+00:00",
+    "query": "What is Ghana's projected GDP growth in the 2025 budget?",
+    "expanded_query": "What is Ghana's projected GDP growth in the 2025 budget? expenditure revenue fiscal economic growth output",
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "text": "THE 2025 BUDGET STATEMENT\nAND ECONOMIC POLICY OF GOVERNMENT\nThe Budget Statement and Economic Policy of the Government of Ghana for the 2025\nFinancial Year is available for public access.\nTo purchase a physical copy, please contact the Ministry’s Public Relations Office at:\nMinistry of Finance\nPublic Relations Office\nNew Building, Ground Floor, Rooms 001 and 003\nP. O. Box MB 40\nAccra – Ghana\nElectronic copies can be downloaded from our website (www.mofep.gov.gh)",
+        "score": 0.5264863967895508,
+        "source": "budget"
+      },
+      {
+        "rank": 2,
+        "text": "60. The table below summarizes Ghana’s performance on the rationalized ECOWAS\nmacroeconomic convergence criteria as of December 2024:\nTable 4: Ghana’s performance on the rationalized ECOWAS macroeconomic\nconvergence criteria as of December 2024\nNo. Convergence Criteria Target Ghana\nPrimary Criteria\n1 Budget Deficit (Inc. Grants)/GDP ≤ 3% 5.2% (Not Achieved)\n2 Inflation (annual average) ≤ 5% 22.9% (Not Achieved)\nCentral Bank Budget Deficit\n3 10% zero financing (Achieved)\nFinancing\n4 Gross External Reserves ≥ 3 months 4.0 Months (Achieved)\nSecondary Criteria\n5 Nominal Exchange Rate ± 10% -19.20% (Not achieved)\n6 Public Debt /GDP ≤ 70% 61.8% (Achieved)\nSource: BoG/MoF\n61. Despite these challenges, Ghana is projected to improve its performance by the end\nof 2025, benefiting from ongoing macroeconomic reforms aimed at fiscal consolidation,\nenhanced revenue mobilization, and monetary stability.",
+        "score": 0.5418089628219604,
+        "source": "budget"
+      },
+      {
+        "rank": 3,
+        "text": "The Budget Statement\nand Economic Policy\nof the Government of Ghana for the\n2025 Financial Year\nPresented to Parliament by\nDR. CASSIEL ATO FORSON (MP)\nMINISTER FOR FINANCE\nOn Tuesday March 11, 2025\nOn the Authority of\nHIS EXCELLENCY JOHN DRAMANI MAHAMA\nPRESIDENT OF THE REPUBLIC OF GHANA\nIn accordance with Section 28 of the\nPublic Financial Management Act, 2016 (Act 921)",
+        "score": 0.6148152351379395,
+        "source": "budget"
+      },
+      {
+        "rank": 4,
+        "text": "SECTION 6: SECTORAL PERFORMANCE AND OUTLOOK\nIntroduction\n396. Mr. Speaker, the Theme ‘‘Resetting the Economy for the Ghana We Want” the\nimplementation of prudent and sustainable programmes and interventions that drives\ninclusive growth and robust job creation across the country.\n397. The Medium-Term National Development Policy Framework (MTNDPF 2022-2025) is\nbeing implemented through the plans of sector Ministries, Departments and Agencies,\nas well as District Assemblies. This section, therefore, highlights the performance of\nthe sectors in 2024 with regard to the implementation of the MTNDPF 2022-2025 and\nprovide the outlook for the MDAs in line with the Executive Instrument (E.I. 1, 2025)\nand the State of the Nation (SONA) as presented by H.E. The President on the 27th of\nFebruary, 2025.\n398. The 2025 Budget introduces transformative sectoral programmes and projects\ndesigned to stimulate economic growth and development. These strategic initiatives\nincludes:\ni. implementing the “Adwumawura” programme\nii. the “Teacher Dabrɛ Initiative”\niii. the “Poultry Farm to Table” and “Nkoko Nkitinkiti” Projects;\niv. MahamaCares;\nv. E-okada; and\nvi. One Million Coders Project.\nAdministration Sectors\n399. The main focus of the Administration Sector is to ensure effective democratic\ngovernance, public financial management, local governance administration, public\naccountability, public policy management, as well as good international relations,\ndevelopment communications, and civil society engagement.\n400. The programmes in this sector aim to achieve the SDGs 1,3,4,6,8,10,12,16, and 17,\nand Africa Union (AU) Agenda 2063 Goals 2,11,12,13,15,19 and 20.\nOffice of Government Machinery\n2024 Performance and Outlook for 2025\n401. Mr. Speaker, the Office of Government Machinery (OGM) exists to provide accountable,\ntransparent, managerial, technical, and administrative services to the Presidency and\nother stakeholders for the attainment of the government’s development agenda of\nimproving the quality of life of all Ghanaians.\n402. Mr. Speaker, the Cabinet Secretariat organised 16 meetings and 2 Cabinet retreats,\nreceived 43 Cabinet memos, produced 52 reports on Cabinet decisions out of which\n14 were submitted to Parliament.\n74",
+        "score": 0.6427969932556152,
+        "source": "budget"
+      },
+      {
+        "rank": 5,
+        "text": "SECTION 3: STATE OF GHANA’S ECONOMY AS AT END\n2024\n62. Mr. Speaker, to put the assessment of the Ghanaian economy in proper perspective,\nit will be useful to first restate the macro-fiscal targets for 2024:\ni. Overall real GDP growth rate of 3.1 percent;\nii. Overall Non-Oil real GDP growth rate of 2.8 percent;\niii. End-period December year-on-year inflation of 15.0 percent;\niv. Overall budget deficit (Commitment basis) of 4.2 percent of GDP;\nv. Primary balance surplus (Commitment basis) of 0.5 percent of GDP; and\nvi. Gross International Reserves (including oil funds and encumbered assets) to cover\nnot less than 3.0 months of imports.\n63. Mr. Speaker, we have inherited a precarious economic condition beset by daunting\nfiscal challenges characterized by large accumulation of MDA arrears/payables, energy\nsector financing shortfalls, and fiscal risks from the cocoa and financial sectors. Weak\ncommitment control system and reckless public spending have reversed the progress\nmade in fiscal consolidation under the IMF-supported Programme which commenced\nin 2023.\nStatus of IMF-Supported Programme\n64. Mr. Speaker, despite the gains made under the IMF-supported Programme since its\nimplementation in May 2023, the economy is still fragile and remains in distress.\n65. Mr. Speaker, key performance targets, under the Quantitative Performance Criteria\n(QPCs), Indicative Targets (ITs) and Monetary Policy Consultative Clause (MPCC), to\nbe assessed in the upcoming 4th review of the Programme by the IMF staff scheduled\nfor April 2025 such as the primary balance (commitment), inflation, and social\nprotection spending for end-December 2024, are likely missed. In addition, all\nstructural benchmarks due by end-December 2024 and January 2025 are likely missed.\n66. Mr. Speaker, 2024 did not witness any improvement in inflation as inflation ended the\nyear at 23.8%, which is 0.6 percentage points higher than the 23.2% recorded at the\nend of 2023. The 2024 end-period inflation also exceeded the budget target of 15%\nby 8.8 percentage points and the IMF central target of 18% by 5.8 percentage points,\ntriggering a discussion with the IMF under the Monetary Policy Consultation Clause\n(MPCC).\n67. Mr. Speaker, the primary balance (commitment) worsened from a deficit of 0.2% of\nGDP in 2023 to a deficit of 3.9% in 2024, which is 4.4 percentage points worse than\nthe target surplus of 0.5% for the year 2024.\n10",
+        "score": 0.6689453125,
+        "source": "budget"
+      }
+    ],
+    "prompt_template_used": 1,
+    "prompt_sent_to_llm": "You are an AI assistant for Academic City University.\nAnswer the question using ONLY the context provided below.\nIf the answer is not in the context, say exactly:\n\"I don't have enough information to answer that.\"\nDo not make up any information.\n\nContext:\n[Chunk 1]\nTHE 2025 BUDGET STATEMENT\nAND ECONOMIC POLICY OF GOVERNMENT\nThe Budget Statement and Economic Policy of the Government of Ghana for the 2025\nFinancial Year is available for public access.\nTo purchase a physical copy, please contact the Ministry’s Public Relations Office at:\nMinistry of Finance\nPublic Relations Office\nNew Building, Ground Floor, Rooms 001 and 003\nP. O. Box MB 40\nAccra – Ghana\nElectronic copies can be downloaded from our website (www.mofep.gov.gh)\n\n[Chunk 2]\n60. The table below summarizes Ghana’s performance on the rationalized ECOWAS\nmacroeconomic convergence criteria as of December 2024:\nTable 4: Ghana’s performance on the rationalized ECOWAS macroeconomic\nconvergence criteria as of December 2024\nNo. Convergence Criteria Target Ghana\nPrimary Criteria\n1 Budget Deficit (Inc. Grants)/GDP ≤ 3% 5.2% (Not Achieved)\n2 Inflation (annual average) ≤ 5% 22.9% (Not Achieved)\nCentral Bank Budget Deficit\n3 10% zero financing (Achieved)\nFinancing\n4 Gross External Reserves ≥ 3 months 4.0 Months (Achieved)\nSecondary Criteria\n5 Nominal Exchange Rate ± 10% -19.20% (Not achieved)\n6 Public Debt /GDP ≤ 70% 61.8% (Achieved)\nSource: BoG/MoF\n61. Despite these challenges, Ghana is projected to improve its performance by the end\nof 2025, benefiting from ongoing macroeconomic reforms aimed at fiscal consolidation,\nenhanced revenue mobilization, and monetary stability.\n\n[Chunk 3]\nThe Budget Statement\nand Economic Policy\nof the Government of Ghana for the\n2025 Financial Year\nPresented to Parliament by\nDR. CASSIEL ATO FORSON (MP)\nMINISTER FOR FINANCE\nOn Tuesday March 11, 2025\nOn the Authority of\nHIS EXCELLENCY JOHN DRAMANI MAHAMA\nPRESIDENT OF THE REPUBLIC OF GHANA\nIn accordance with Section 28 of the\nPublic Financial Management Act, 2016 (Act 921)\n\nQuestion: What is Ghana's projected GDP growth in the 2025 budget?\n\nAnswer:\n",
+    "llm_response": "I don't have enough information to answer that."
+  },
+  {
+    "timestamp": "2026-04-19T04:35:55.477156+00:00",
+    "query": "What is the meaning of life?",
+    "expanded_query": "What is the meaning of life?",
+    "retrieved_chunks": [],
+    "prompt_template_used": 1,
+    "prompt_sent_to_llm": "You are an AI assistant for Academic City University.\nAnswer the question using ONLY the context provided below.\nIf the answer is not in the context, say exactly:\n\"I don't have enough information to answer that.\"\nDo not make up any information.\n\nContext:\n\n\nQuestion: What is the meaning of life?\n\nAnswer:\n",
+    "llm_response": "I don't have enough information to answer that."
+  },
+  {
+    "timestamp": "2026-04-19T04:41:02.207869+00:00",
+    "feedback": "positive",
+    "query": "what is the 2025 budget",
+    "top_chunk": "2025 Macroeconomic Targets\n250. Mr. Speaker, in pursuit of the overarching macroeconomic objectives, the following\nmacroeconomic targets are set for the 2025 fiscal year:\ni. Overall Real GDP growth of at least 4.0 percent;\nii. Non-Oil Real GDP growth of at least 4.8 percent;\niii. End-Period inflation rate of 11.9 percent;\niv. Primary Balance on Commitment basis at a surplus of 1.5 percent of\nGDP; and\nv. Gross International Reserves (including oil funds and\nencumbered/pledged assets) to cover not less than 3 months of\nimports.\n2025 Expenditure Measures\n251. Mr. Speaker, to contain public expenditure and bring public finances back on a\nsustainable path, we will improve the quality and efficiency in public spending and\nrationalise expenditure to spur growth.\n252. Mr. Speaker, the following expenditure measures will be implemented in the 2025\nfiscal year and the medium-term to support the fiscal consolidation agenda:\ni. conduct a comprehensive audit to validate the quantum of outstanding\nclaim (arrears) and commitments as at 31st December 2024;\nii. review/audit the current business process for budget preparation and\nimplementation with a view to simplifying and improving the process to\nsupport value for money, prevent arrears accumulation, and control\ncommitments;\niii. ensure mandatory use of the “Blanket Purchase Order” to capture multi-\nyear commitments/contracts in line with MTEF ceilings;\niv. amend the Public Procurement law to provide for an Independent Value-\nfor-Money Office to scrutinize government procurements above a\nthreshold determined by Parliament;\nv. amend the Public Procurement Act to make commencement certificates\nand budgetary provisions prerequisites for all procurements to be paid\nby central government;\nvi. in 2025, we will fully integrate GHANEPS with GIFMIS to ensure that only\nMDAs’ projects/purchase orders that have approved budgets and\nallotments can obtain procurement approvals to award contracts;\nvii. operationalise the Compliance Desk at the Ministry of Finance to monitor\nreports on commitments and arrears accumulation to enable them\namong others, publish a PFM league table for compliance and/or non-\ncompliance of the PFM provisions. This will include list of MDAs that are\ncompliant and/or non-compliant;\nviii. strictly enforce sanctions under Sections 96 to 98 of PFM Act for breaches\nof the PFM Act, especially those that relate to arrears accumulation and\ncommitment control;\nix. cut wasteful expenditures on inefficient and/or duplicative programmes\nto reduce expenditure under the fiscal consolidation programme. In this\nregard, selected expenditure items including the GhanaCARES, the\n51"
+  },
+  {
+    "timestamp": "2026-04-19T05:07:08.813031+00:00",
+    "feedback": "positive",
+    "query": "what is the 2025 budget",
+    "top_chunk": "2025 Macroeconomic Targets\n250. Mr. Speaker, in pursuit of the overarching macroeconomic objectives, the following\nmacroeconomic targets are set for the 2025 fiscal year:\ni. Overall Real GDP growth of at least 4.0 percent;\nii. Non-Oil Real GDP growth of at least 4.8 percent;\niii. End-Period inflation rate of 11.9 percent;\niv. Primary Balance on Commitment basis at a surplus of 1.5 percent of\nGDP; and\nv. Gross International Reserves (including oil funds and\nencumbered/pledged assets) to cover not less than 3 months of\nimports.\n2025 Expenditure Measures\n251. Mr. Speaker, to contain public expenditure and bring public finances back on a\nsustainable path, we will improve the quality and efficiency in public spending and\nrationalise expenditure to spur growth.\n252. Mr. Speaker, the following expenditure measures will be implemented in the 2025\nfiscal year and the medium-term to support the fiscal consolidation agenda:\ni. conduct a comprehensive audit to validate the quantum of outstanding\nclaim (arrears) and commitments as at 31st December 2024;\nii. review/audit the current business process for budget preparation and\nimplementation with a view to simplifying and improving the process to\nsupport value for money, prevent arrears accumulation, and control\ncommitments;\niii. ensure mandatory use of the “Blanket Purchase Order” to capture multi-\nyear commitments/contracts in line with MTEF ceilings;\niv. amend the Public Procurement law to provide for an Independent Value-\nfor-Money Office to scrutinize government procurements above a\nthreshold determined by Parliament;\nv. amend the Public Procurement Act to make commencement certificates\nand budgetary provisions prerequisites for all procurements to be paid\nby central government;\nvi. in 2025, we will fully integrate GHANEPS with GIFMIS to ensure that only\nMDAs’ projects/purchase orders that have approved budgets and\nallotments can obtain procurement approvals to award contracts;\nvii. operationalise the Compliance Desk at the Ministry of Finance to monitor\nreports on commitments and arrears accumulation to enable them\namong others, publish a PFM league table for compliance and/or non-\ncompliance of the PFM provisions. This will include list of MDAs that are\ncompliant and/or non-compliant;\nviii. strictly enforce sanctions under Sections 96 to 98 of PFM Act for breaches\nof the PFM Act, especially those that relate to arrears accumulation and\ncommitment control;\nix. cut wasteful expenditures on inefficient and/or duplicative programmes\nto reduce expenditure under the fiscal consolidation programme. In this\nregard, selected expenditure items including the GhanaCARES, the\n51"
+  },
+  {
+    "timestamp": "2026-04-19T05:08:36.733277+00:00",
+    "feedback": "positive",
+    "query": "budget",
+    "top_chunk": "2025 Macroeconomic Targets\n250. Mr. Speaker, in pursuit of the overarching macroeconomic objectives, the following\nmacroeconomic targets are set for the 2025 fiscal year:\ni. Overall Real GDP growth of at least 4.0 percent;\nii. Non-Oil Real GDP growth of at least 4.8 percent;\niii. End-Period inflation rate of 11.9 percent;\niv. Primary Balance on Commitment basis at a surplus of 1.5 percent of\nGDP; and\nv. Gross International Reserves (including oil funds and\nencumbered/pledged assets) to cover not less than 3 months of\nimports.\n2025 Expenditure Measures\n251. Mr. Speaker, to contain public expenditure and bring public finances back on a\nsustainable path, we will improve the quality and efficiency in public spending and\nrationalise expenditure to spur growth.\n252. Mr. Speaker, the following expenditure measures will be implemented in the 2025\nfiscal year and the medium-term to support the fiscal consolidation agenda:\ni. conduct a comprehensive audit to validate the quantum of outstanding\nclaim (arrears) and commitments as at 31st December 2024;\nii. review/audit the current business process for budget preparation and\nimplementation with a view to simplifying and improving the process to\nsupport value for money, prevent arrears accumulation, and control\ncommitments;\niii. ensure mandatory use of the “Blanket Purchase Order” to capture multi-\nyear commitments/contracts in line with MTEF ceilings;\niv. amend the Public Procurement law to provide for an Independent Value-\nfor-Money Office to scrutinize government procurements above a\nthreshold determined by Parliament;\nv. amend the Public Procurement Act to make commencement certificates\nand budgetary provisions prerequisites for all procurements to be paid\nby central government;\nvi. in 2025, we will fully integrate GHANEPS with GIFMIS to ensure that only\nMDAs’ projects/purchase orders that have approved budgets and\nallotments can obtain procurement approvals to award contracts;\nvii. operationalise the Compliance Desk at the Ministry of Finance to monitor\nreports on commitments and arrears accumulation to enable them\namong others, publish a PFM league table for compliance and/or non-\ncompliance of the PFM provisions. This will include list of MDAs that are\ncompliant and/or non-compliant;\nviii. strictly enforce sanctions under Sections 96 to 98 of PFM Act for breaches\nof the PFM Act, especially those that relate to arrears accumulation and\ncommitment control;\nix. cut wasteful expenditures on inefficient and/or duplicative programmes\nto reduce expenditure under the fiscal consolidation programme. In this\nregard, selected expenditure items including the GhanaCARES, the\n51"
+  }
+]

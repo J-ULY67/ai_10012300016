@@ -1,0 +1,9 @@
+[
+  {
+    "timestamp": "2026-04-19T04:36:52.673947+00:00",
+    "feedback": "positive",
+    "query": "[demo_rerank] Who won the presidential election in Ghana?",
+    "top_chunk": "In Savannah Region, Nana Akufo Addo of NPP received 54425 votes.",
+    "note": "synthetic feedback for demonstrate_reranking()"
+  }
+]

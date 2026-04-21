@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+data/faiss_index.bin
+data/chunks_metadata.pkl
+data/faiss_index/
