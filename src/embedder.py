@@ -29,11 +29,6 @@ from typing import Any
 
 import numpy as np
 
-try:
-    from sentence_transformers import SentenceTransformer
-except ImportError as e:  # pragma: no cover
-    raise ImportError("Install sentence-transformers: pip install sentence-transformers") from e
-
 # Hugging Face / sentence-transformers model id (384-dimensional embeddings).
 MODEL_NAME = "all-MiniLM-L6-v2"
 
@@ -48,6 +43,11 @@ class Embedder:
         batch_size: int = 32,
         device: str | None = None,
     ) -> None:
+        try:
+            from sentence_transformers import SentenceTransformer
+        except ImportError as e:  # pragma: no cover
+            raise ImportError("Install sentence-transformers: pip install sentence-transformers") from e
+
         kwargs: dict[str, Any] = {}
         if device:
             kwargs["device"] = device

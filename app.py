@@ -37,10 +37,7 @@ def _inject_groq_from_streamlit_secrets() -> None:
         pass
 
 
-_inject_groq_from_streamlit_secrets()
-
 from src.logger import log_feedback
-from src.pipeline import load_pipeline
 
 STUDENT_NAME = "Nana Kwaku Owusu-Ansah"
 STUDENT_INDEX = "10012300016"
@@ -48,6 +45,10 @@ STUDENT_INDEX = "10012300016"
 
 @st.cache_resource(show_spinner="Loading FAISS index and embedding model…")
 def get_pipeline():
+    # Lazy-import so Streamlit Cloud cold start does not import torch/sentence-transformers
+    # until the user sends a message (avoids import-time OOM / boot timeouts).
+    from src.pipeline import load_pipeline
+
     return load_pipeline()
 
 
@@ -271,6 +272,7 @@ def main() -> None:
         layout="centered",
         initial_sidebar_state="expanded",
     )
+    _inject_groq_from_streamlit_secrets()
 
     _inject_styles()
 
