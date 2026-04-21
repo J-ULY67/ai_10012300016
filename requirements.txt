@@ -1,0 +1,10 @@
+# Streamlit Community Cloud and local installs
+streamlit>=1.28.0
+pandas>=2.0.0
+numpy>=1.24.0
+faiss-cpu>=1.7.4
+sentence-transformers>=2.2.0
+torch>=2.0.0
+groq>=0.4.0
+python-dotenv>=1.0.0
+pdfplumber>=0.10.0

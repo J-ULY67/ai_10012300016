@@ -27,6 +27,18 @@ if str(BASE) not in sys.path:
 
 os.environ.setdefault("PYTHONIOENCODING", "utf-8")
 
+
+def _inject_groq_from_streamlit_secrets() -> None:
+    """On Streamlit Community Cloud, API keys live in st.secrets; llm_handler reads os.environ."""
+    try:
+        if "GROQ_API_KEY" in st.secrets:
+            os.environ.setdefault("GROQ_API_KEY", str(st.secrets["GROQ_API_KEY"]))
+    except Exception:
+        pass
+
+
+_inject_groq_from_streamlit_secrets()
+
 from src.logger import log_feedback
 from src.pipeline import load_pipeline
 

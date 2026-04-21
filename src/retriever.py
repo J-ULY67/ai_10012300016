@@ -421,12 +421,15 @@ def demonstrate_failure_case(
     print(f"Logged failure-case comparison to: {path.resolve()}")
 
 
-def _load_or_build_index(embedder: Embedder) -> tuple[faiss.Index, list[dict[str, Any]]]:
+def _load_or_build_index(
+    embedder: Embedder,
+    index_dir: Path | None = None,
+) -> tuple[faiss.Index, list[dict[str, Any]]]:
     from src.data_loader import load_budget_pdf, load_election_csv
     from src.vector_store import build_index, load_index, save_index
 
     root = _PROJECT_ROOT
-    index_dir = root / "data" / "faiss_index"
+    index_dir = Path(index_dir) if index_dir else root / "data" / "faiss_index"
     bin_path = index_dir / "faiss_index.bin"
 
     if bin_path.is_file():

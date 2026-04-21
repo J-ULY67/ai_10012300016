@@ -22,8 +22,7 @@ from src.embedder import Embedder
 from src.llm_handler import generate_response
 from src.logger import utc_timestamp, write_log
 from src.prompt_builder import build_prompt
-from src.retriever import expand_query, retrieve
-from src.vector_store import load_index
+from src.retriever import _load_or_build_index, expand_query, retrieve
 
 
 def _chunks_for_log(retrieved: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -49,8 +48,8 @@ class RAGPipeline:
     def __init__(self, index_dir: str | Path | None = None, embedder: Embedder | None = None) -> None:
         self._root = _PROJECT_ROOT
         self.index_dir = Path(index_dir) if index_dir else self._root / "data" / "faiss_index"
-        self._index, self._chunks_metadata = load_index(self.index_dir)
         self._embedder = embedder or Embedder()
+        self._index, self._chunks_metadata = _load_or_build_index(self._embedder, self.index_dir)
 
     def run_pipeline(
         self,
